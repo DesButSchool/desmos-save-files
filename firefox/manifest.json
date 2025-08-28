@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Desmos Save Files",
+  "version": "0.0",
+
+  "description": "Adds the ability to save/load files on the Desmos Graphing Calculator. Not an official product by Desmos or Amplify Education.",
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.desmos.com/calculator/*"],
+      "js": ["siteaccess.js"]
+    }
+  ],
+  "browser_action": {
+  "default_icon": {
+    "16": "icons/16.png",
+    "32": "icosn/32.png"
+  },
+  "default_title": "Save or Load Graph",
+  "default_popup": "popup/savedialog.html"
+  }]
+}
+}
